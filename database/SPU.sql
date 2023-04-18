@@ -18,7 +18,7 @@ BEGIN
 		WHERE EST.estado = '1';
 END $$
 
-993507782
+
 DELIMITER $$
 CREATE PROCEDURE spu_estudiantes_registrar
 (
@@ -48,7 +48,7 @@ CALL spu_estudiantes_registrar('Munayco', 'José', 'D', '77779999', '1999-09-20'
 CALL spu_estudiantes_registrar('Prada', 'Teresa', 'C', '01234567', '2002-09-25', 3, 2, '');
 SELECT * FROM estudiantes;
 */
-
+0
 DELIMITER $$
 CREATE PROCEDURE spu_sedes_listar()
 BEGIN
@@ -69,5 +69,33 @@ BEGIN
 		WHERE idescuela = _idescuela;
 END $$
 
+SELECT * FROM estudiantes;
+
 CALL spu_carreras_listar(3);
+
+CALL spu_estudiantes_listar;
+
+
+
+/*
+UPDATE estudiantes
+SET fotografia = NULL
+WHERE fotografia = 'unafoto.jpg' OR
+	fotografia '';
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
